@@ -11,5 +11,33 @@
     <!--  ----- JavaScript file ----- -->
     <script src="script.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <!--  ----- body of our site ----- -->
+    <div class="w-screen h-screen bg-gray-800" id="body">
+      <!--  ----- The First Part ----- -->
+      <div class="w-screen h-24 flex justify-around items-center pt-4">
+        <button class="bg-white px-4 py-3 rounded-md text-2xl" id="againbtb">
+          Again!
+        </button>
+        <h1 class="text-white text-3xl">(Between 1 & 20)</h1>
+      </div>
+      <!--  ----- The Second Part ----- -->
+      <div class="w-screen h-32 flex justify-around items-center my-8">
+        <h1 class="text-white text-5xl">Guess My Number!</h1>
+      </div>
+      <!--  ----- The Third Part ----- -->
+      <div class="w-screen h-36 flex justify-center items-center">
+        <div class="w-screen h-2 bg-white absolute"></div>
+        <h1 class="bg-white inline z-10 p-4 px-12 text-8xl" id="shownumber">
+          ?
+        </h1>
+      </div>
+      <!--  ----- The Fourth Part ----- -->
+      <div class="flex justify-evenly mt-12">
+        <div class="w-2/5 flex flex-col justify-center items-center">
+          <input type="number" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
