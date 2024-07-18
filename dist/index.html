@@ -7,7 +7,7 @@
     <!--  ----- Tailwind css style file ----- -->
     <link rel="stylesheet" href="output.css" />
     <!--  ----- JavaScript file ----- -->
-    <script src="script.js" defer></script>
+
     <!--  ----- Custome Style file ----- -->
     <style>
       * {
@@ -23,7 +23,7 @@
     <div class="w-screen h-screen bg-gray-800" id="body">
       <!--  ----- The First Part ----- -->
       <div class="w-screen h-24 flex justify-around items-center pt-4">
-        <button class="bg-white px-4 py-3 rounded-md text-2xl" id="againbtb">
+        <button class="bg-white px-4 py-3 rounded-md text-2xl" id="againbtn">
           Again!
         </button>
         <h1 class="text-white text-3xl">(Between 1 & 20)</h1>
@@ -42,20 +42,21 @@
       <!--  ----- The Fourth Part ----- -->
       <div class="flex justify-evenly mt-12">
         <div class="w-2/5 flex flex-col justify-center items-center">
-          <input
-            type="number"
-            id="numberguess"
-            class="bg-transparent border-4 text-white text-5xl w-32 block p-3 text-center"
-            min="0"
-            max="20"
-          />
-          <button
-            type="submit"
-            class="bg-white text-2xl my-4 p-4"
-            id="checkbutton"
-          >
-            Check !
-          </button>
+          <form action="">
+            <input
+              type="number"
+              id="numberguess"
+              class="bg-transparent border-4 text-white text-5xl w-32 block p-3 text-center"
+              min="0"
+              max="20"
+            />
+            <input
+              type="submit"
+              value="Check !"
+              class="bg-white text-2xl my-4 p-4"
+              id="checkbutton"
+            />
+          </form>
         </div>
         <!--  ----- The last Part ----- -->
         <div class="w-2/5 inline-block">
@@ -71,5 +72,6 @@
         </div>
       </div>
     </div>
+    <script src="script.js" defer></script>
   </body>
 </html>
