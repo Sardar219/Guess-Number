@@ -10,46 +10,7 @@ const body = document.querySelector("#body");
 let counter = 20;
 let total = 0;
 let computerguess = Math.trunc(Math.random() * 20) + 1;
-console.log(computerguess);
 ///////// check part  /////////////
-checkbtn.addEventListener("click", function () {
-  const uservalue = Number(userguess.value);
-  userguess.value = "";
-  console.log(userguess.value);
-  // /////// if user dont't enter anything ///////
-  if (!uservalue) {
-    guaidtext.textContent = "⛔ No number !";
-  }
-  // /////// if user found the correct number //////////
-  else if (uservalue === computerguess) {
-    shownumber.textContent = computerguess;
-    changeColor();
-    if (counter > total) {
-      total = counter;
-      highscore.textContent = total;
-    }
-  }
-  // //////// if user entered higher than computer ////
-  else if (uservalue > computerguess) {
-    if (counter > 1) {
-      counter--;
-      guaidtext.textContent = "📈 Too high!";
-      score.textContent = counter;
-    } else {
-      changeColorf();
-    }
-  }
-  // //////// if user entered lower than computer ////
-  else {
-    if (counter > 1) {
-      counter--;
-      guaidtext.textContent = "📉 Too low!";
-      score.textContent = counter;
-    } else {
-      changeColorf();
-    }
-  }
-});
 
 function changeColor() {
   guaidtext.textContent = "🎉 correct number !";
@@ -78,4 +39,49 @@ againbtn.addEventListener("click", function () {
   userguess.value = "";
   shownumber.textContent = "?";
   score.textContent = 20;
+  console.log(computerguess);
+});
+
+checkbtn.addEventListener("click", function () {
+  const uservalue = Number(userguess.value);
+  userguess.value = "";
+  // /////// if user dont't enter anything ///////
+  if (!uservalue) {
+    guaidtext.textContent = "⛔ No number !";
+  }
+  // /////// if user found the correct number //////////
+  else if (uservalue === computerguess) {
+    shownumber.textContent = computerguess;
+    changeColor();
+    if (counter > total) {
+      total = counter;
+      highscore.textContent = total;
+    }
+  }
+  // //////// if user entered higher than computer ////
+  else if (uservalue > computerguess && uservalue <= 20) {
+    if (counter > 1) {
+      counter--;
+      guaidtext.textContent = "📈 Too high!";
+      score.textContent = counter;
+    } else {
+      changeColorf();
+    }
+  }
+  // //////// if user entered higher or lower than 1 to 20 ////
+  else if (uservalue < computerguess && uservalue >= 1) {
+    if (counter > 1) {
+      counter--;
+      guaidtext.textContent = "📉 Too low!";
+      score.textContent = counter;
+    } else {
+      changeColorf();
+    }
+  }
+  // //////// if user entered lower than computer ////
+  else {
+    counter--;
+    guaidtext.textContent = "🎯 Enter in range(1,20)";
+    score.textContent = counter;
+  }
 });
