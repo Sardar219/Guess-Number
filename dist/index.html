@@ -6,10 +6,17 @@
     <title>Guess Number Game</title>
     <!--  ----- Tailwind css style file ----- -->
     <link rel="stylesheet" href="output.css" />
-    <!--  ----- Custome css style file ----- -->
-    <link rel="stylesheet" href="style.css" />
     <!--  ----- JavaScript file ----- -->
     <script src="script.js" defer></script>
+    <!--  ----- Custome Style file ----- -->
+    <style>
+      * {
+        font-family: Poppins;
+      }
+      input {
+        background-color: transparent;
+      }
+    </style>
   </head>
   <body>
     <!--  ----- body of our site ----- -->
@@ -38,7 +45,7 @@
           <input
             type="number"
             id="numberguess"
-            class="border-4 text-white text-5xl w-32 block p-3"
+            class="bg-transparent border-4 text-white text-5xl w-32 block p-3 text-center"
             min="0"
             max="20"
           />
