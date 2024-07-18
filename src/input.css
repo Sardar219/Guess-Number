@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.title {
+  @apply text-green-500 sm:text-red-500 md:text-blue-500 lg:text-purple-500 xl:text-pink-500;
+}
