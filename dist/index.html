@@ -35,7 +35,32 @@
       <!--  ----- The Fourth Part ----- -->
       <div class="flex justify-evenly mt-12">
         <div class="w-2/5 flex flex-col justify-center items-center">
-          <input type="number" />
+          <input
+            type="number"
+            id="numberguess"
+            class="border-4 text-white text-5xl w-32 block p-3"
+            min="0"
+            max="20"
+          />
+          <button
+            type="submit"
+            class="bg-white text-2xl my-4 p-4"
+            id="checkbutton"
+          >
+            Check !
+          </button>
+        </div>
+        <!--  ----- The last Part ----- -->
+        <div class="w-2/5 inline-block">
+          <p class="text-white text-3xl mb-10" id="Textguaid">
+            Start guessing ...
+          </p>
+          <p class="text-white text-2xl">
+            💯 Score : <span class="score">20</span>
+          </p>
+          <p class="text-white text-2xl">
+            🎖️ Highscore : <span class="highscore">0</span>
+          </p>
         </div>
       </div>
     </div>
